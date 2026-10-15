@@ -1,0 +1,102 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V7_iHQU7401g",
+        "outputId": "601c17e4-ace5-4acd-9b80-2ac3434d8b7d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the numbers of your choice.\n",
+            "Enter first number: 25\n",
+            "Enter second number: 75\n",
+            "Operation choices\n",
+            "1 - Addition\n",
+            "2 - Subtraction\n",
+            "3 - Multiplication\n",
+            "4 - Division\n",
+            "Enter choice: 1\n",
+            "Result:  100\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Version 2: Shortened variable namenames and added comments\n",
+        "\n",
+        "#Function for Addition\n",
+        "def add_nums(num1, num2):\n",
+        "  sum = num1 + num2\n",
+        "  return sum\n",
+        "\n",
+        "#Function for Subtraction\n",
+        "def subtract_nums(num1, num2):\n",
+        "  difference = num1 - num2\n",
+        "  return difference\n",
+        "\n",
+        "#Function for Multiplication\n",
+        "def multiply_nums(num1, num2):\n",
+        "  product = num1*num2\n",
+        "  return product\n",
+        "\n",
+        "#Function for Division with checking for division by zero\n",
+        "def divide_nums(num1, num2):\n",
+        "  if num2 == 0:\n",
+        "    return(\"Cannot divide by zero.\")\n",
+        "  quotient = num1/num2\n",
+        "  return quotient\n",
+        "\n",
+        "#Prompt the user to input two numbers\n",
+        "print(\"Enter the numbers of your choice.\")\n",
+        "first_num = int(input(\"Enter first number: \"))\n",
+        "second_num = int(input(\"Enter second number: \"))\n",
+        "\n",
+        "#Display the mathematical operation options\n",
+        "print(\"Operation choices\")\n",
+        "print(\"1 - Addition\")\n",
+        "print(\"2 - Subtraction\")\n",
+        "print(\"3 - Multiplication\")\n",
+        "print(\"4 - Division\")\n",
+        "\n",
+        "#Get user's operation choice\n",
+        "operation = int(input(\"Enter choice: \"))\n",
+        "\n",
+        "#Use conditional statements to call the corresponding functions\n",
+        "if operation == 1:\n",
+        "  result = add_nums(first_num, second_num)\n",
+        "elif operation == 2:\n",
+        "  result = subtract_nums(first_num, second_num)\n",
+        "elif operation == 3:\n",
+        "  result = multiply_nums(first_num, second_num)\n",
+        "elif operation == 4:\n",
+        "  result = divide_nums(first_num, second_num)\n",
+        "else:\n",
+        "  print(\"Invalid choice.\")\n",
+        "\n",
+        "#Display the result\n",
+        "print(\"Result: \", result)"
+      ]
+    }
+  ]
+}
